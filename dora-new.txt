@@ -1,16 +1,9 @@
 import turtle
-from os import path
 
-currentDir = os.abspath(path.curdir) #get the python file location
+screen = turtle.Screen()
 
-wn = turtle.Screen()
-wn.setup(width=700,height=400)
-wn.title("image test")
+image = "image.gif"
 
-wn.addshape(currentDir+"\\Resources\\image.gif") #u can make images in a new folder
-
-myImage = turtle.Turtle()
-myImage.speed(0) #so it will draw the image instantly
-myImage.shape(currentDir+"\\Resources\\image.gif") #give your object the image
-myImage.penup() #if you dont do this, it will draw a line
-myImage.goto(0,0) #give your image a location
+# add the shape first then set the turtle shape
+screen.addshape(image)
+turtle.shape(image)
